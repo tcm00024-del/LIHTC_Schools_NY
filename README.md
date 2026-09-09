@@ -18,6 +18,11 @@ data/
 code/
   cleaning/     Python/Google Colab notebooks that build the processed panel from raw HUD and NYSED source files
   estimation/   R scripts implementing TWFE, Callaway-Sant'Anna, and Sun-Abraham event study estimators
+    enrollment/ R scripts for the enrollment/demographic-composition outcomes (headcount and
+                demographic panels); shares helper functions via enrollment_estimation_helpers.R
+    scores/     R scripts for the test-score outcomes, by subgroup (Full and No-NYC samples,
+                each split into Full/ and No_NYC/ subfolders under data/processed/Subgroups/);
+                shares helper functions via cs_estimation_helpers.R
 ```
 
 ## Data sources
@@ -31,7 +36,9 @@ Raw source files are not redistributed in this repository; see `data/README.md` 
 ## Requirements
 
 - Python 3.x (Google Colab environment) for the data-cleaning pipeline
-- R with the following packages for estimation: `did` (Callaway-Sant'Anna), `fixest` (Sun-Abraham via `sunab()`), `fixest::feols` (TWFE)
+- R with the following packages for estimation: `did` (Callaway-Sant'Anna), `fixest` (Sun-Abraham via `sunab()` and TWFE via `feols()`), `data.table`, `ggplot2` (event-study plots), `here` (portable, project-root-relative file paths — see note below)
+
+All estimation scripts locate the repository root automatically via the `here` package rather than a hardcoded path. This works out of the box after `git clone`; if you instead download the repository as a ZIP (no `.git` folder), add an empty file named `.here` at the repository root first so `here()` can still find it.
 
 ## Reproducing the analysis
 
