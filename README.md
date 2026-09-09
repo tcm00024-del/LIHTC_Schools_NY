@@ -12,20 +12,26 @@ This repository contains the analysis-ready data, data-cleaning pipeline, and es
 ## Repository structure
 
 ```
-data /
-    Attendance/ Analysis-ready panel data used for estimation of attendance effects
-    Enrollment/ Analysis-ready panel data used for estimation of enrollment effects
-    Test Scores/ Analysis-ready panel data used for estimation of test score effects 
-    README.md     Data dictionary and description of raw source data (not redistributed here)
+data/
+  processed/          Analysis-ready panel data used directly by the R scripts in code/estimation
+    headcount_panel_full.csv, headcount_panel_no_nyc.csv,
+    demographic_panel_full.csv, demographic_panel_no_nyc.csv
+                      Enrollment/demographic-composition panels, read directly by code/estimation/enrollment/
+    Subgroups/
+      Full/           Per-subgroup test-score panels (full sample), read by code/estimation/scores/
+      No_NYC/         Per-subgroup test-score panels (NYC excluded), read by code/estimation/scores/
+  README.md           Data dictionary and description of raw source data (not redistributed here)
 code/
-  cleaning/     Python/Google Colab notebooks that build the processed panel from raw HUD and NYSED source files
-  estimation/   R scripts implementing TWFE, Callaway-Sant'Anna, and Sun-Abraham event study estimators
-    enrollment/ R scripts for the enrollment/demographic-composition outcomes (headcount and
-                demographic panels); shares helper functions via enrollment_estimation_helpers.R
-    scores/     R scripts for the test-score outcomes, by subgroup (Full and No-NYC samples,
-                each split into Full/ and No_NYC/ subfolders under data/processed/Subgroups/);
-                shares helper functions via cs_estimation_helpers.R
+  cleaning/           Python/Google Colab notebooks that build the processed panel from raw HUD and NYSED source files
+  estimation/         R scripts implementing TWFE, Callaway-Sant'Anna, and Sun-Abraham event study estimators
+    enrollment/       R scripts for the enrollment/demographic-composition outcomes (headcount and
+                      demographic panels); shares helper functions via enrollment_estimation_helpers.R
+    scores/           R scripts for the test-score outcomes, by subgroup (Full and No-NYC samples,
+                      each read from data/processed/Subgroups/Full/ and data/processed/Subgroups/No_NYC/);
+                      shares helper functions via cs_estimation_helpers.R
 ```
+
+Attendance/suspension outcomes are part of the paper's analysis but the corresponding data and estimation scripts are not yet organized into this repository — that section of `code/estimation/` and `data/processed/` will be added in a subsequent commit before submission.
 
 ## Data sources
 
