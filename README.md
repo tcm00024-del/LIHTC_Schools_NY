@@ -12,9 +12,11 @@ This repository contains the analysis-ready data, data-cleaning pipeline, and es
 ## Repository structure
 
 ```
-data/
-  processed/    Analysis-ready panel data used directly by the R scripts in code/estimation
-  README.md     Data dictionary and description of raw source data (not redistributed here)
+data /
+    Attendance/ Analysis-ready panel data used for estimation of attendance effects
+    Enrollment/ Analysis-ready panel data used for estimation of enrollment effects
+    Test Scores/ Analysis-ready panel data used for estimation of test score effects 
+    README.md     Data dictionary and description of raw source data (not redistributed here)
 code/
   cleaning/     Python/Google Colab notebooks that build the processed panel from raw HUD and NYSED source files
   estimation/   R scripts implementing TWFE, Callaway-Sant'Anna, and Sun-Abraham event study estimators
