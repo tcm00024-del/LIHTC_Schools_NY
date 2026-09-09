@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Low Income Housing and School Performance: Evidence from New York State Report Cards - Replication Data and Code"
+authors:
+  - family-names: Meadows
+    given-names: Thaddeus
+    affiliation: "West Virginia University, Department of Economics"
+    email: tcm00024@mix.wvu.edu
+version: 1.0.0
+date-released: "2026-09-09"
+license: "MIT"
+repository-code: "https://github.com/tcm00024-del/LIHTC_Schools_NY"
