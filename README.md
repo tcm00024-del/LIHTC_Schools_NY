@@ -7,7 +7,7 @@ Replication data and code for the paper examining the effects of Low-Income Hous
 
 ## Overview
 
-This repository contains the analysis-ready data, data-cleaning pipeline, and estimation code supporting the paper. The paper investigates whether the opening of LIHTC-funded housing developments affects standardized test scores, student body composition, and attendance/suspension outcomes at nearby New York State public schools (excluding New York City), using Callaway-Sant'Anna and Sun-Abraham staggered-treatment estimators.
+This repository contains the analysis-ready data, data-cleaning pipeline, and estimation code supporting the paper. The paper investigates whether the opening of LIHTC-funded housing developments affects standardized test scores and student body composition at nearby New York State public schools (excluding New York City), using Callaway-Sant'Anna and Sun-Abraham staggered-treatment estimators. The paper also discusses attendance and suspension outcomes; those results were null and are reported narratively rather than through the estimation pipeline in this repository.
 
 ## Repository structure
 
@@ -30,8 +30,6 @@ code/
                       each read from data/processed/Subgroups/Full/ and data/processed/Subgroups/No_NYC/);
                       shares helper functions via cs_estimation_helpers.R
 ```
-
-Attendance/suspension outcomes are part of the paper's analysis but the corresponding data and estimation scripts are not yet organized into this repository — that section of `code/estimation/` and `data/processed/` will be added in a subsequent commit before submission.
 
 ## Data sources
 
