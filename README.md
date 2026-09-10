@@ -2,8 +2,8 @@
 
 Replication data and code for the paper examining the effects of Low-Income Housing Tax Credit (LIHTC) funded developments on nearby New York State public schools.
 
-**Author:** Thaddeus Meadows, Department of Economics, West Virginia University
-**Contact:** tcm00024@mix.wvu.edu
+**Author:** Withheld for double blind review
+**Contact:** Withheld for double blind review
 
 ## Overview
 
