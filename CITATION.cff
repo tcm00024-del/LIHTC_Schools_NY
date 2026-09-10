@@ -7,6 +7,10 @@ authors:
     affiliation: "West Virginia University, Department of Economics"
     email: tcm00024@mix.wvu.edu
 version: 1.0.0
-date-released: "2026-09-09"
+date-released: "2026-09-10"
 license: "MIT"
 repository-code: "https://github.com/tcm00024-del/LIHTC_Schools_NY"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22696359"
+    description: "Archived snapshot of version 1.0.0 of this replication package, corresponding to the version cited in the paper."
